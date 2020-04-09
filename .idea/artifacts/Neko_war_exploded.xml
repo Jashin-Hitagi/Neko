@@ -1,0 +1,30 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Neko:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Neko_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Neko/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Neko" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="D:/intellij IDEA安装包及框架工具（mybatis.maven）/jakarta-taglibs-standard-1.1.2/lib/jstl.jar" />
+          <element id="file-copy" path="D:/intellij IDEA安装包及框架工具（mybatis.maven）/jakarta-taglibs-standard-1.1.2/lib/standard.jar" />
+          <element id="file-copy" path="D:/intellij IDEA安装包及框架工具（mybatis.maven）/JSON/commons-beanutils-1.7.0.jar" />
+          <element id="file-copy" path="D:/intellij IDEA安装包及框架工具（mybatis.maven）/JSON/commons-lang-2.5.jar" />
+          <element id="file-copy" path="D:/intellij IDEA安装包及框架工具（mybatis.maven）/JSON/commons-collections-3.1.jar" />
+          <element id="file-copy" path="D:/intellij IDEA安装包及框架工具（mybatis.maven）/JSON/commons-logging.jar" />
+          <element id="file-copy" path="D:/intellij IDEA安装包及框架工具（mybatis.maven）/JSON/ezmorph-1.0.3.jar" />
+          <element id="file-copy" path="D:/intellij IDEA安装包及框架工具（mybatis.maven）/JSON/json-lib-2.4-jdk15.jar" />
+          <element id="file-copy" path="D:/oracle/ojdbc6.jar" />
+        </element>
+        <element id="directory" name="js">
+          <element id="library" level="application" name="bootstrap.min.js" />
+          <element id="library" level="application" name="bootstrap.js" />
+          <element id="library" level="project" name="jquery.js" />
+          <element id="library" level="project" name="jquery.min.js" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

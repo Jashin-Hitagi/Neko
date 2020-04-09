@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jquery.min.js" type="javaScript">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/web/js/jquery.min.js" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
