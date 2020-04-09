@@ -1,0 +1,308 @@
+﻿----------创建用户表
+
+CREATE TABLE neko_user(
+u_id VARCHAR2(20) UNIQUE,
+u_pwd VARCHAR(20),
+u_name VARCHAR2(20),
+sex VARCHAR(10) CHECK (sex IN ('男','女')),
+u_type NUMBER(10) CHECK (u_type IN(1,2)));
+
+
+-------插入用户数据
+
+INSERT INTO neko_user VALUES ('321','123','王豪','男',2);
+
+--------创建航班表
+
+CREATE TABLE neko_filght(
+f_id VARCHAR2(20) UNIQUE,
+s_place VARCHAR(20),
+a_place VARCHAR(20),
+s_airport VARCHAR(20),
+a_airport VARCHAR(20),
+s_time DATE,
+a_time DATE,
+company VARCHAR(20),
+f_type VARCHAR(20),
+price NUMBER(10),
+seat NUMBER(5));
+
+-------插入航班数据
+
+INSERT INTO neko_filght VALUES(
+'HO1679','南京','贵阳','南京禄口机场T2','贵阳龙洞堡机场T2',
+ to_date('2019-09-20 10:20:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-20 13:50:00','YYYY-MM-DD HH24:MI:SS'),
+ '东方航空','客空321（中）',430,46);
+
+
+INSERT INTO neko_filght VALUES(
+'KN5987','北京','南京','首都机场T1','南京禄口机场T2',
+ to_date('2019-09-21 12:10:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-21 16:40:00','YYYY-MM-DD HH24:MI:SS'),
+ '东方航空','客空A321（中）',530,38);
+
+INSERT INTO neko_filght VALUES(
+'CN3173','北京','南京','首都机场T2','南京禄口机场T1',
+ to_date('2019-09-25 07:00:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-25 12:30:00','YYYY-MM-DD HH24:MI:SS'),
+ '南方航空','客空321（中）',553,25);
+
+INSERT INTO neko_filght VALUES(
+'CN3139','北京','南京','首都机场T2','南京禄口机场T2',
+ to_date('2019-09-27 09:10:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-27 14:40:00','YYYY-MM-DD HH24:MI:SS'),
+ '南方航空','客空320（中）',520,15);
+
+INSERT INTO neko_filght VALUES(
+'JD5572','北京','南京','首都机场T1','南京禄口机场T1',
+ to_date('2019-09-24 09:50:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-24 11:40:00','YYYY-MM-DD HH24:MI:SS'),
+ '首都航空','客空320（中）',533,25);
+
+INSERT INTO neko_filght VALUES(
+'KN5978','南京','贵阳','南京禄口机场T1','贵阳龙洞堡机场T2',
+ to_date('2019-09-21 11:20:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-21 14:50:00','YYYY-MM-DD HH24:MI:SS'),
+ '中国联合航空','波音737（中）',531,25);
+
+INSERT INTO neko_filght VALUES(
+'KN5978','上海','济南','浦东机场T1','南苑机场',
+to_date('2019-09-22 08:55:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-20 11:10:00','YYYY-MM-DD HH24:MI:SS'),
+'中国联合航空','波音737(中)',509,32);
+
+INSERT INTO neko_filght VALUES(
+'CN3173','南京','贵阳','南京禄口机场T2','贵阳龙洞堡机场T1',
+ to_date('2019-09-22 09:20:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-22 12:50:00','YYYY-MM-DD HH24:MI:SS'),
+ '南方航空','空客330（中）',632,15);
+
+INSERT INTO neko_filght VALUES(
+'CN3173','北京','西安','首都机场T2','咸阳机场',
+to_date('2019-09-23 06:54:00','YYYY-MM-DD HH24:MI:SS'),
+to_date('2019-09-22 08:45:00','YYYY-MM-DD HH24:MI:SS'),
+'南方航空','空客330(宽)',500,51);
+
+INSERT INTO neko_filght VALUES(
+'EU2207','重庆','三亚','双流机场T2','凤凰机场T1',
+to_date('2019-09-24 19:45:00','YYYY-MM-DD HH24:MI:SS'),
+to_date('2019-09-24 22:25:00','YYYY-MM-DD HH24:MI:SS'),
+'成都航空','空客320(中)',594,23);
+
+INSERT INTO neko_filght VALUES(
+'ZH1736','深圳','杭州','宝安机场T3','萧山机场T1',
+ to_date('2019-09-21 22:15:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-22 00:15:00','YYYY-MM-DD HH24:MI:SS'),
+ '深圳航空','客空320（中）',450,16);
+
+INSERT INTO neko_filght VALUES(
+'CZ6246','昆明','哈尔滨','长水机场','太平机场T2',
+ to_date('2019-09-22 16:50:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-22 23:30:00','YYYY-MM-DD HH24:MI:SS'),
+ '南方航空','客空A320（中）',930,36);
+
+INSERT INTO neko_filght VALUES(
+'MF1187','广州','北京','白云机场T2','首都机场T2',
+ to_date('2019-09-24 21:55:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-25 01:10:00','YYYY-MM-DD HH24:MI:SS'),
+ '厦门航空','客空320（中）',1710,28);
+
+INSERT INTO neko_filght VALUES(
+'MF1178','广州','北京','白云机场T1','首都机场T2',
+ to_date('2019-09-23 22:35:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-24 02:05:00','YYYY-MM-DD HH24:MI:SS'),
+ '厦门航空','客空A321（中）',1690,38);
+
+INSERT INTO neko_filght VALUES(
+'MF1188','广州','北京','白云机场T2','首都机场T1',
+ to_date('2019-09-21 23:45:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-22 03:00:00','YYYY-MM-DD HH24:MI:SS'),
+ '厦门航空','客空321（中）',1610,16);
+
+
+INSERT INTO neko_filght VALUES(
+'HO1106','厦门','上海','高崎机场T4','浦东机场T2',
+ to_date('2019-09-25 23:00:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-26 01:00:00','YYYY-MM-DD HH24:MI:SS'),
+ '吉祥航空','客空321（中）',300,31);
+
+INSERT INTO neko_filght VALUES(
+'JD5572','重庆','海口','龙洞堡机场T2','美兰机场',
+ to_date('2019-09-23 20:15:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-23 21:55:00','YYYY-MM-DD HH24:MI:SS'),
+ '首都航空','客空321（中）',665,9);
+
+INSERT INTO neko_filght VALUES(
+'QW9793','青岛','哈尔滨','流亭机场T1','太平机场T2',
+ to_date('2019-09-23 07:35:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-23 09:35:00','YYYY-MM-DD HH24:MI:SS'),
+ '青岛航空','客空320（中）',537,42);
+
+INSERT INTO neko_filght VALUES(
+'CA8918','青岛','哈尔滨','流亭机场T1','太平机场T2',
+ to_date('2019-09-23 21:20:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-24 19:00:00','YYYY-MM-DD HH24:MI:SS'),
+ '中国航空','波音737（中）',608,46);
+
+
+INSERT INTO neko_filght VALUES(
+'3U8548','石家庄','成都','首都机场T3','双流机场T1',
+ to_date('2019-09-24 23:00:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-25 01:55:00','YYYY-MM-DD HH24:MI:SS'),
+ '四川航空','空客A321（中）',1010,39);
+
+INSERT INTO neko_filght VALUES(
+'MF5042','石家庄','成都','首都机场T3','双流机场T1',
+ to_date('2019-09-24 23:00:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-25 01:55:00','YYYY-MM-DD HH24:MI:SS'),
+ '厦门航空','空客A321（中）',1100,29);
+
+INSERT INTO neko_filght VALUES(
+'CZ9656','石家庄','成都','首都机场T3','双流机场T1',
+ to_date('2019-09-24 23:05:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-25 01:55:00','YYYY-MM-DD HH24:MI:SS'),
+ '四川航空','空客321（中）',1110,20);
+
+INSERT INTO neko_filght VALUES(
+'3U8357','天津','海口','滨海机场T2','美兰机场',
+ to_date('2019-09-23 06:20:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-23 09:45:00','YYYY-MM-DD HH24:MI:SS'),
+ '四川航空','空客321（中）',800,30);
+
+INSERT INTO neko_filght VALUES(
+'MU3920','天津','海口','滨海机场T2','美兰机场',
+ to_date('2019-09-23 06:20:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-23 09:45:00','YYYY-MM-DD HH24:MI:SS'),
+ '东方航空','空客321（中）',860,28);
+
+INSERT INTO neko_filght VALUES(
+'3U8675','天津','海口','滨海机场T2','美兰机场',
+ to_date('2019-09-23 09:10:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-23 15:15:00','YYYY-MM-DD HH24:MI:SS'),
+ '四川航空','空客321（中）',920,41);
+
+INSERT INTO neko_filght VALUES(
+'MU2882','上海','南京','浦东机场T1','禄口机场T2',
+ to_date('2019-09-23 23:05:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-24 00:10:00','YYYY-MM-DD HH24:MI:SS'),
+ '东方航空','空客320（中）',180,45);
+
+INSERT INTO neko_filght VALUES(
+'MU2817','上海','南京','浦东机场T2','禄口机场T1',
+ to_date('2019-09-22 07:05:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-22 09:10:00','YYYY-MM-DD HH24:MI:SS'),
+ '东方航空','空客321（中）',160,35);
+
+INSERT INTO neko_filght VALUES(
+'MU2829','上海','南京','浦东机场T1','禄口机场T2',
+ to_date('2019-09-23 11:25:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-23 01:30:00','YYYY-MM-DD HH24:MI:SS'),
+ '东方航空','空客A321（中）',175,35);
+
+INSERT INTO neko_filght VALUES(
+'MU28856','上海','南京','浦东机场T1','禄口机场T2',
+ to_date('2019-09-25 15:45:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-25 17:50:00','YYYY-MM-DD HH24:MI:SS'),
+ '东方航空','空客321（中）',170,35);
+
+INSERT INTO neko_filght VALUES(
+'JD5578','三亚','北京','凤凰机场T2','首都机场T1',
+ to_date('2019-09-22 21:15:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-23 01:20:00','YYYY-MM-DD HH24:MI:SS'),
+ '首都航空','空客330（大）',635,19);
+
+INSERT INTO neko_filght VALUES(
+'CA1346','三亚','北京','凤凰机场T2','首都机场T3',
+ to_date('2019-09-22 20:15:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-23 00:50:00','YYYY-MM-DD HH24:MI:SS'),
+ '中国国航','波音737（中）',700,6);
+
+INSERT INTO neko_filght VALUES(
+'MU3008','三亚','北京','凤凰机场T1','首都机场T2',
+ to_date('2019-09-22 20:20:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-23 00:35:00','YYYY-MM-DD HH24:MI:SS'),
+ '东方航空','空客330（中）',700,10);
+
+INSERT INTO neko_filght VALUES(
+'MU2728','长沙','南京','黄花机场T2','禄口机场T2',
+ to_date('2019-09-22 22:45:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-23 00:25:00','YYYY-MM-DD HH24:MI:SS'),
+ '东方航空','空客320（中）',420,15);
+
+
+INSERT INTO neko_filght VALUES(
+'MU2754','长沙','南京','黄花机场T1','禄口机场T2',
+ to_date('2019-09-22 14:45:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-22 16:20:00','YYYY-MM-DD HH24:MI:SS'),
+ '成都航空','空客320（中）',583,34);
+
+
+INSERT INTO neko_filght VALUES(
+'KY9786','长沙','南京','黄花机场T1','禄口机场T2',
+ to_date('2019-09-22 20:55:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-22 22:25:00','YYYY-MM-DD HH24:MI:SS'),
+ '昆明航空','波音737（中）',750,35);
+
+INSERT INTO neko_filght VALUES(
+'HO3792','青岛','上海','遥墙机场','浦东机场T1',
+ to_date('2019-09-22 07:30:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-22 09:15:00','YYYY-MM-DD HH24:MI:SS'),
+ '吉祥航空','空客320（中）',540,30);
+
+INSERT INTO neko_filght VALUES(
+'MU5572','青岛','上海','遥墙机场','虹桥机场T2',
+ to_date('2019-09-22 09:55:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-22 11:35:00','YYYY-MM-DD HH24:MI:SS'),
+ '东方航空','波音737（中）',690,37);
+
+INSERT INTO neko_filght VALUES(
+'CZ9252','青岛','上海','遥墙机场','虹桥机场T2',
+ to_date('2019-09-22 09:55:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-22 11:35:00','YYYY-MM-DD HH24:MI:SS'),
+ '南方航空','波音737（中）',690,25);
+
+INSERT INTO neko_filght VALUES(
+'GS6694','北京','大连','桃仙机场T3','周子水机场',
+ to_date('2019-09-22 11:55:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-23 00:45:00','YYYY-MM-DD HH24:MI:SS'),
+ '天津航空','ERJ190（中）',393,45);
+
+INSERT INTO neko_filght VALUES(
+'HO1188','沈阳','上海','桃仙机场T3','浦东机场T2',
+ to_date('2019-09-22 21:20:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-22 23:55:00','YYYY-MM-DD HH24:MI:SS'),
+ '吉祥航空','空客321（中）',640,16);
+
+INSERT INTO neko_filght VALUES(
+'HO1286','沈阳','上海','桃仙机场T3','浦东机场T2',
+ to_date('2019-09-22 21:40:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-23 00:30:00','YYYY-MM-DD HH24:MI:SS'),
+ '吉祥航空','空客321（中）',640,15);
+
+INSERT INTO neko_filght VALUES(
+'CZ6509','沈阳','上海','桃仙机场T3','浦东机场T2',
+ to_date('2019-09-22 20:00:00','YYYY-MM-DD HH24:MI:SS'),
+ to_date('2019-09-22 22:35:00','YYYY-MM-DD HH24:MI:SS'),
+ '南方航空','空客A320（中）',680,24);
+
+-------创建订单表
+ CREATE TABLE neko_order(
+ o_id VARCHAR2(20) UNIQUE,
+ f_id VARCHAR2(20),
+s_place VARCHAR(20),
+a_place VARCHAR(20),
+s_time DATE,
+o_type VARCHAR(10) CHECK (o_type IN ('头等舱','经济舱')),
+amount NUMBER(5),
+total_price NUMBER(10),
+u_name VARCHAR2(20),
+tip VARCHAR2(10));
+
+------插入订单数据
+
+INSERT INTO neko_order VALUES('KZ211','HO1679','南京','贵阳',
+to_date('2019-09-20 10:20:00','YYYY-MM-DD HH24:MI:SS'),
+'头等舱',2,960,'王豪','待审核');
+
+
